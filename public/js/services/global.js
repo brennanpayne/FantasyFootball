@@ -7,5 +7,6 @@ window.angular.module('ngff.services.global', [])
       },
       isSignedIn: function(){
         return !!current_user;
-      };
+      }
+    };
   });
