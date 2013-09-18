@@ -1,8 +1,22 @@
 //Setting up route
 window.app.config(['$routeProvider', function($routeProvider) {
-	$routeProvider
-	.when('/', { templateUrl: 'views/index.html' })
-	.otherwise({redirectTo: '/'});
+	$routeProvider	
+  .when('/',
+  {
+    templateUrl: 'views/index.html'
+  })
+  .when('/nflteams',
+  {
+    templateUrl: 'views/nfl/list.html'
+  })
+  .when('nflteams/:nfltTeamId',
+  {
+    templateUrl: 'views/nfl/view.html'
+  })
+  .otherwise(
+  {
+    redirectTo: '/'
+  });
 }]);
 
 //Removing tomcat unspported headers
@@ -14,4 +28,25 @@ window.app.config(['$httpProvider', function($httpProvider, Configuration) {
 window.app.config(['$locationProvider', function($locationProvider) {
     //$locationProvider.html5Mode(true);
     $locationProvider.hashPrefix("!");
+}]);
+
+
+window.app.config(['$routeProvider', function($routeProvider){
+  $routeProvider 
+  .when('/',
+  {
+    templateUrl: 'views/index.html'
+  })
+  .when('/nflteams',
+  {
+    templateUrl: 'views/nfl/list.html'
+  })
+  .when('nflteams/:nfltTeamId',
+  {
+    templateUrl: 'views/nfl/view.html'
+  })
+  .otherwise(
+  {
+    redirectTo: '/'
+  });
 }]);
