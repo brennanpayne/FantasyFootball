@@ -29,24 +29,3 @@ window.app.config(['$locationProvider', function($locationProvider) {
     //$locationProvider.html5Mode(true);
     $locationProvider.hashPrefix("!");
 }]);
-
-
-window.app.config(['$routeProvider', function($routeProvider){
-  $routeProvider 
-  .when('/',
-  {
-    templateUrl: 'views/index.html'
-  })
-  .when('/nflteams',
-  {
-    templateUrl: 'views/nfl/list.html'
-  })
-  .when('nflteams/:nfltTeamId',
-  {
-    templateUrl: 'views/nfl/view.html'
-  })
-  .otherwise(
-  {
-    redirectTo: '/'
-  });
-}]);
