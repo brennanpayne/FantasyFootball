@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
   , League = mongoose.model('League')
   , _ = require('underscore')
 
-exports.create = function(req, res){
+exports.create = function (req, res) {
   var league = new League(req.body)
   league.commissioner = req.user
   league.save()
@@ -11,7 +11,7 @@ exports.create = function(req, res){
 }
 
 exports.show = function(req, res){
-  res.jsonp(req.league)
+  res.jsonp(req.league);
 }
 
 exports.league = function(req, res, next, id){
@@ -49,7 +49,7 @@ exports.destroy = function(req, res){
   var league = req.league
   league.remove(function(err){
     if(err){
-      res.render('error', {status: 500})
+      res.render('error', {status: 500});
     }else{
       res.jsonp(1);
     }

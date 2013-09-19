@@ -27,7 +27,7 @@ window.app.config(['$routeProvider', function($routeProvider) {
   })
   .when('/leagues/:leagueId',
   {
-    templateUrl: 'views/leagues/views.html'
+    templateUrl: 'views/leagues/view.html'
   })
   .otherwise({redirectTo: '/'});
 }]);

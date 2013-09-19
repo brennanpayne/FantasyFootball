@@ -1,6 +1,6 @@
-window.angular.module('ngff.controlers.leagues', [])
+window.angular.module('ngff.controllers.leagues', [])
   .controller('LeaguesController', ['$scope', '$routeParams', '$location', 'Global', 'Leagues',
-    function($scope, $routeParams, $location, Global, Leagues){
+    function($scope, $routeParams, $location, Global, Leagues){      
       $scope.global = Global;
 
       $scope.create = function(){
@@ -9,7 +9,7 @@ window.angular.module('ngff.controlers.leagues', [])
         });
 
         league.$save(function(response){
-          $location.path('leagues/' + response._id)
+          $location.path("leagues/" + response._id)
         });
 
         this.league.name = "";
@@ -34,7 +34,7 @@ window.angular.module('ngff.controlers.leagues', [])
         });
       };
 
-      $scope.destroy = function(){
+      $scope.destroy = function(league){
         league.$remove();
         for (var i in $scope.leagues){
           if($scope.leagues[i] == league){
@@ -43,5 +43,7 @@ window.angular.module('ngff.controlers.leagues', [])
         }
       };
 
-      
     }]);
+
+
+  

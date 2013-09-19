@@ -10,4 +10,4 @@ window.angular.module('ngff.services.leagues', [])
           update: {method: 'PUT'}
         }
       )
-    }]);
+    }])
