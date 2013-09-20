@@ -5,6 +5,7 @@ window.app.config(['$routeProvider', function($routeProvider) {
   {
     templateUrl: 'views/index.html'
   })
+  // NFL Team routes
   .when('/nflteams',
   {
     templateUrl: 'views/nfl/list.html'
@@ -13,6 +14,7 @@ window.app.config(['$routeProvider', function($routeProvider) {
   {
     templateUrl: 'views/nfl/view.html'
   })
+  // League routes
   .when('/leagues',
   {
     templateUrl: 'views/leagues/list.html'
@@ -28,6 +30,22 @@ window.app.config(['$routeProvider', function($routeProvider) {
   .when('/leagues/:leagueId',
   {
     templateUrl: 'views/leagues/view.html'
+  })
+  // Fantasy team routes
+  .when('/fantasyteams',
+  {
+    templateUrl: 'views/fantasyteams/list.html'
+  })
+  .when('/fantasyteams/create',
+  {
+    templateUrl: 'views/fantasyteams/create.html'
+  })
+  .when('/fantasyteams/:fantasyTeamId/edit',
+  {
+    templateUrl: 'views/fantasyteams/edit.html'
+  })
+  .when('/fantasyteams/:fantasyTeamId',{
+    templateUrl: 'views/fantasyteams/view.html'
   })
   .otherwise({redirectTo: '/'});
 }]);
