@@ -4,7 +4,7 @@ window.angular.module('ngff.services.fantasyTeams', [])
       return $resource(
         'fantasyteams/:fantasyTeamId',
         {
-          fantasyTeamId:'@_id"'
+          fantasyTeamId:'@_id'
         },
         {
           update: {method: 'PUT'}
