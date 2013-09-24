@@ -3,6 +3,7 @@ window.app = angular.module('ngFantasyFootball',
  
 // bundling dependencies
 window.angular.module('ngff.controllers',
-  ['ngff.controllers.header','ngff.controllers.index','ngff.controllers.nfl', 'ngff.controllers.leagues', 'ngff.controllers.fantasyTeams']);
+  ['ngff.controllers.header','ngff.controllers.index','ngff.controllers.nfl', 'ngff.controllers.leagues', 'ngff.controllers.fantasyTeams',
+  'ngff.controllers.players']);
 window.angular.module('ngff.services',
   ['ngff.services.global', 'ngff.services.nfl', 'ngff.services.leagues', 'ngff.services.fantasyTeams']);
