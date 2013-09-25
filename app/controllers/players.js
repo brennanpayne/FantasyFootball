@@ -22,7 +22,7 @@ exports.player = function(req, res, next, id){
 exports.all = function(req, res){
   Player.find(function(err, players){
     if(err){
-      res.render('error', { status: 500});
+      res.render('error', { status: 500 });
     } else {
       res.jsonp(players);
     }
