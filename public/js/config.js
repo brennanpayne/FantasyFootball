@@ -47,6 +47,11 @@ window.app.config(['$routeProvider', function($routeProvider) {
   .when('/fantasyteams/:fantasyTeamId',{
     templateUrl: 'views/fantasyteams/view.html'
   })
+  // Players routes
+  .when('/players',
+  {
+    templateUrl: 'views/players/list.html'
+  })
   .otherwise({redirectTo: '/'});
 }]);
 
